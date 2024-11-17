@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Scanner</title>
+  <link rel="stylesheet" href="qrScanner.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📷 QR Code Scanner</h1>
+      <p>Scan QR codes using your camera or upload an image.</p>
+    </header>
+
+    <!-- 카메라 화면 -->
+    <div class="scanner">
+      <video id="camera" autoplay playsinline></video>
+    </div>
+
+    <!-- 버튼 및 입력 -->   
+    <div class="controls">
+      <button id="start-scan">Start Camera Scan</button>
+      <!-- <input type="file" id="file-input" accept="image/*"> -->
+    </div>
+
+    <!-- 결과 표시 -->
+    <div id="result">Scan a QR code to see the result.</div>
+  </div>
+
+  <!-- 스크립트 로드 -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+  <script src="qrScanner.js"></script>
+</body>
+</html>
